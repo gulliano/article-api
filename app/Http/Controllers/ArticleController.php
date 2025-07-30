@@ -9,6 +9,7 @@ class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * /Users/gustaveguilliano/dwwm/article-api/app
      */
     public function index()
     {

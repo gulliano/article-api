@@ -8,6 +8,16 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+// Health check endpoint for Heroku
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'ok',
+        'timestamp' => now()->toISOString(),
+        'service' => 'Article API',
+        'version' => '1.0.0'
+    ]);
+});
+
  // Select All
 Route::get('article',[ArticleController::class , 'index'] );
 
